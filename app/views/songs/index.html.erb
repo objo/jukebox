@@ -1,1 +1,22 @@
-<h1><%= @title %></h1>
+<h1>Songs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Duration</th>
+    <th>Artist</th>
+    <th>View</th>
+  </tr>
+
+  <% @songs.each do |song|  %>
+    <tr>
+      <td><%= song.name %></td>
+      <td><%= song.duration %></td>
+      <td><%= song.artist.name %></td>
+      <td><%= link_to "X", show_song_url(song) %></td>
+    </tr>
+  <% end %>
+
+
+
+</table>
